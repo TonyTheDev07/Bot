@@ -17,16 +17,11 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
-    if (msg.content === 'ping') {
-        msg.reply('pong');
+    if (msg.content === '$vdhelp') {
+        msg.reply('VoiD Developers is a team that designs the discord servers. Also do moderation for already existing servers!');
 
-    } else if (msg.content.startsWith('!kick')) {
-        if (msg.mentions.users.size) {
-            const taggedUser = msg.mentions.users.first();
-            msg.channel.send(`You wanted to kick: ${taggedUser.username}`);
-
-        } else {
-            msg.reply('Please tag a valid user!');
-        }
+    } else if (msg.content === '$help')
+            msg.reply('Updating Soon!');
+        } 
     }
 });
